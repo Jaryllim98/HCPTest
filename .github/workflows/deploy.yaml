@@ -5,11 +5,12 @@ on:
     branches: [ main ]  # Triggers on every push to main branch
 
 env:
-  AWS_REGION: us-east-1  # Update this if using a different region
-  ECR_REPOSITORY: hello-world-app  # Must match Terraform output
-  ECS_CLUSTER: hello-world-cluster  # Must match Terraform output
-  ECS_SERVICE: hello-world-service  # Must match Terraform output
+  AWS_REGION: us-east-1  # Ensure this matches Terraform
+  ECR_REPOSITORY: 727646473297.dkr.ecr.us-east-1.amazonaws.com/hello-world-app  # Use full URL from Terraform output
+  ECS_CLUSTER: hello-world-cluster  # Matches Terraform output
+  ECS_SERVICE: hello-world-service  # Matches Terraform output
   IMAGE_TAG: latest
+
 
 jobs:
   deploy:
