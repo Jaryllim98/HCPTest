@@ -6,7 +6,7 @@ on:
 
 env:
   AWS_REGION: us-east-1  # Ensure this matches Terraform
-  ECR_REPOSITORY: 727646473297.dkr.ecr.us-east-1.amazonaws.com/hello-world-app  # Use full URL from Terraform output
+  ECR_REPOSITORY: hello-world-app  # Use full URL from Terraform output
   ECS_CLUSTER: hello-world-cluster  # Matches Terraform output
   ECS_SERVICE: hello-world-service  # Matches Terraform output
   IMAGE_TAG: latest
